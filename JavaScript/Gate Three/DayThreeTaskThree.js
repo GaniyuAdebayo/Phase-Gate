@@ -16,5 +16,21 @@ function taskOne(numbers, arraySize){
 	return newNumber;
 
 }
-let num = [10, 11, 12];
-console.log(taskOne(num, 9));
+
+function taskThree(numbers){
+
+	let numberIndex = [0, 0];
+	let largest = numbers[0][0];
+
+		for (let rowIndex = 0; rowIndex < numbers.length; rowIndex++){
+
+			for (let columnIndex = 0; columnIndex < numbers[rowIndex].length; columnIndex++){
+				if (numbers[rowIndex][columnIndex] > largest){
+					largest = numbers[rowIndex][columnIndex];
+					numberIndex[0] = rowIndex;
+					numberIndex[1] = columnIndex;
+				}
+			}
+		}
+	return numberIndex;
+}
