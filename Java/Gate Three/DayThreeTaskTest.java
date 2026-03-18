@@ -1,5 +1,7 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 public class DayThreeTaskTest{
 
@@ -30,5 +32,30 @@ public class DayThreeTaskTest{
 		assertArrayEquals(actual, expected);
 	}
 
+	@Test
+	public void testForLargestNumberIn2DArray(){
+		double [][] number ={{45.2, 90.28, 77.1}, {3.52, 9.86, 11.77}, {7.7, 10, 22.33, 12}};
+		int [] actual = DayThreeTask.taskThree(number);
+		int [] expected = {0,1};
+		assertArrayEquals(actual, expected);
+	}
+
+	@Test
+	public void testTheNumberOfCharacters(){
+		String words = "AaaBBc";
+		String actual = DayThreeTask.taskTwo(words);
+		String expected = "A1a2B2c1";
+		assertEquals(actual, expected);
+
+	}
+
+	@Test
+	public void testForAnotherInTheNumberOfCharacters(){
+		String words = "EEEEnnnneee";
+		String actual = DayThreeTask.taskTwo(words);
+		String expected = "E4n4e3";
+		assertEquals(actual, expected);
+
+	}
 
 }
