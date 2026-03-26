@@ -4,6 +4,24 @@ public class User{
 	private String lastName;
 	private String phoneNumber;
 
+	//public User(String firstName, String lastName, String phoneNumber){
+	//	boolean validity = true;
+	//	for (int index = 0; index < phoneNumber.length(); index++){
+	//		if (Character.isDigit(phoneNumber.charAt(index)) == false){
+	//			validity = false;
+	//			break;
+	//		}
+	//	}
+	//	if (phoneNumber.length() != 11 && validity == false && !(phoneNumber.startsWith("080") || phoneNumber.startsWith("081") || phoneNumber.startsWith("070") || phoneNumber.startsWith("090")) ||phoneNumber.startsWith("091")){
+//
+//			throw new IllegalArgumentException("Phone number not valid!");
+//		}
+//
+//		this.firstName = firstName;
+//		this.lastName = lastName;
+//		this.phoneNumber = phoneNumber;
+//	}
+
 	public void setFirstName(String firstName){
 		this.firstName = firstName;
 	}	

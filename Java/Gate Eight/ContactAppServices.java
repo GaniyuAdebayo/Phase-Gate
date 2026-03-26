@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 public class ContactAppServices{
 
-	public boolean validatePhoneNumberIsPresent(ArrayList<User> usersDetails, String phoneNumber){
+	public static boolean validatePhoneNumberIsPresent(ArrayList<User> usersDetails, String phoneNumber){
 		for (User details : usersDetails){
 			if (details.getPhoneNumber().equals(phoneNumber)){
 				return true;
@@ -10,7 +10,7 @@ public class ContactAppServices{
 		return false;
 	}
 
-	public void removeContact(ArrayList<User> usersDetails, String phoneNumber){
+	public static void removeContact(ArrayList<User> usersDetails, String phoneNumber){
 		if (validatePhoneNumberIsPresent(usersDetails, phoneNumber) == true){
 			for (User details : usersDetails){
 				if (details.getPhoneNumber().equals(phoneNumber)){
@@ -20,7 +20,7 @@ public class ContactAppServices{
 		}
 	}
 
-	public User findContactByPhoneNumber(ArrayList<User> usersDetails, String phoneNumber){
+	public static User findContactByPhoneNumber(ArrayList<User> usersDetails, String phoneNumber){
 		if (validatePhoneNumberIsPresent(usersDetails, phoneNumber) == true){
 			for (User details : usersDetails){
 				if (details.getPhoneNumber().equals(phoneNumber)){
@@ -31,7 +31,7 @@ public class ContactAppServices{
 		return null;
 	}
 
-	public boolean validateFirstNameIsPresent(ArrayList<User> usersDetails, String firstName){
+	public static boolean validateFirstNameIsPresent(ArrayList<User> usersDetails, String firstName){
 		for (User details : usersDetails){
 			if (details.getFirstName().equalsIgnoreCase(firstName)){
 				return true;
@@ -40,7 +40,7 @@ public class ContactAppServices{
 		return false;
 	}
 
-	public User findContactByFirstName(ArrayList<User> usersDetails, String firstName){
+	public static User findContactByFirstName(ArrayList<User> usersDetails, String firstName){
 		if (validateFirstNameIsPresent(usersDetails, firstName) == true){
 			for (User details : usersDetails){
 				if (details.getFirstName().equalsIgnoreCase(firstName)){
@@ -51,7 +51,7 @@ public class ContactAppServices{
 		return null;
 	}
 
-	public boolean validateLastNameIsPresent(ArrayList<User> usersDetails, String lastName){
+	public static boolean validateLastNameIsPresent(ArrayList<User> usersDetails, String lastName){
 		for (User details : usersDetails){
 			if (details.getLastName().equalsIgnoreCase(lastName)){
 				return true;
@@ -60,7 +60,7 @@ public class ContactAppServices{
 		return false;
 	}
 
-	public User findContactByLastName(ArrayList<User> usersDetails, String lastName){
+	public static User findContactByLastName(ArrayList<User> usersDetails, String lastName){
 		if (validateLastNameIsPresent(usersDetails, lastName) == true){
 			for (User details : usersDetails){
 				if (details.getLastName().equalsIgnoreCase(lastName)){
@@ -71,7 +71,7 @@ public class ContactAppServices{
 		return null;
 	}
 
-	public void editFirstName(ArrayList<User> usersDetails, String phoneNumber, String newFirstName){
+	public static void editFirstName(ArrayList<User> usersDetails, String phoneNumber, String newFirstName){
 		User user = findContactByPhoneNumber(usersDetails, phoneNumber);
 		for (User details : usersDetails){
 			if(details.getPhoneNumber().equals(phoneNumber)){
@@ -81,7 +81,7 @@ public class ContactAppServices{
 		}
 	}
 
-	public void editLastName(ArrayList<User> usersDetails, String phoneNumber, String newLastName){
+	public static void editLastName(ArrayList<User> usersDetails, String phoneNumber, String newLastName){
 		User user = findContactByPhoneNumber(usersDetails, phoneNumber);
 		for (User details : usersDetails){
 			if(details.getPhoneNumber().equals(phoneNumber)){
@@ -90,7 +90,7 @@ public class ContactAppServices{
 		}
 	}
 
-	public void editPhoneNumber(ArrayList<User> usersDetails, String phoneNumber, String newPhoneNumber){
+	public static void editPhoneNumber(ArrayList<User> usersDetails, String phoneNumber, String newPhoneNumber){
 		User user = findContactByPhoneNumber(usersDetails, phoneNumber);
 		for (User details : usersDetails){
 			if(details.getPhoneNumber().equals(phoneNumber)){
